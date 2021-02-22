@@ -1,58 +1,90 @@
 package com.example.demo.entity;
 
-import java.io.Serializable;
+import java.util.HashSet;
 
+
+import java.util.Set;
+
+import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 @Entity
-@Table(name="registration")
-public class RegistrationEntity implements Serializable{
-	
-
-	private static final long serialVersionUID = -2514678108868901834L;
-
+@Table(name="users",uniqueConstraints = { 
+		@UniqueConstraint(columnNames = "username"),
+		@UniqueConstraint(columnNames = "email") 
+	})
+public class RegistrationEntity {
 	@Id
-	@GeneratedValue
-	private long id;
-	
-	@Column(nullable = false)
-	private String userId;
-	
-	@Column(nullable = false, length=20)
-	private String userName;
-	
-	@Column(nullable=false,length=100,unique=true)
-	private String email;
-	
-	@Column(nullable = false)
-	private String encryptedPassword;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-	public long getId() {
+	@NotBlank
+	@Size(max = 20)
+	private String username;
+
+	@NotBlank
+	@Size(max = 50)
+	@Email
+	private String email;
+
+	@NotBlank
+	@Size(max = 120)
+	private String password;
+
+	@ManyToMany
+	@JoinTable(	name = "user_roles", 
+				joinColumns = @JoinColumn(name = "user_id"), 
+				inverseJoinColumns = @JoinColumn(name = "role_id"))
+	@Fetch(FetchMode.JOIN)
+	private Set<Role> roles = new HashSet<>();
+	
+		public RegistrationEntity() {
+			
+		super();
+	}
+
+		public RegistrationEntity(String username, String email, String password) {
+			this.username = username;
+			this.email = email;
+			this.password = password;
+		}
+	
+
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserId(String userId) {
-		this.userId = userId;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 
 	public String getEmail() {
@@ -63,14 +95,20 @@ public class RegistrationEntity implements Serializable{
 		this.email = email;
 	}
 
-	public String getEncryptedPassword() {
-		return encryptedPassword;
+	public String getPassword() {
+		return password;
 	}
 
-	public void setEncryptedPassword(String encryptedPassword) {
-		this.encryptedPassword = encryptedPassword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
-	
-	
+
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
 
 }

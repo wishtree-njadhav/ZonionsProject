@@ -1,0 +1,67 @@
+<div class="container jumbotron">
+    <h1 style="text-align: center;"> Zonions</h1>
+    <h2 translate="">restaurant.add_resto</h2>
+        <form [formGroup]="restaurantForm" (ngSubmit)="saveRestaurant(restaurantForm.value)">
+            <div class="form-group">
+                <b><label translate="">restaurant.resto_name<span style="color: red;">*</span></label></b>
+                <input type="text" placeholder=""
+                formControlName="restaurantName" name="restaurantName" class="form-control"/>
+            </div>
+            <!-- <div *ngFor="let validation of restaurantName_validation_message.restaurantName">
+                <div  *ngIf="restaurantForm.get('restaurantName').hasError(validation.type)
+                 && (restaurantForm.get('restaurantName').dirty || restaurantForm.get('restaurantName').touched)">{{validation.message}}</div>
+              </div> -->
+
+              <!-- <div *ngIf="f.restaurantName.touched && f.restaurantName.invalid" class="alert alert-danger">
+                <div *ngIf="f.restaurantName.errors.required">Restaurant Name is required.</div>
+                <div *ngIf="f.restaurantName.errors.pattern">Restaurant name must contain only numbers and letters.</div>
+            </div> -->
+
+
+            <div class="form-group">
+                <b><label translate="">restaurant.address<span style="color: red;">*</span></label></b>
+                <textarea placeholder="" class="form-control" 
+                formControlName="address" name="address"></textarea>
+
+                <!-- <div *ngIf="f.address.touched && f.address.invalid" class="alert alert-danger">
+                    <div *ngIf="f.address.errors.required">Restaurant address is required.</div>
+                </div> -->
+            </div>
+            
+            <div class="form-group">
+                <b><label translate="">restaurant.phone_no<span style="color: red;">*</span></label></b>
+                <input type="text" placeholder="" class="form-control" 
+                formControlName="phone_no" name="phoneno" >
+
+                <!-- <div *ngIf="f.phone_no.touched && f.phone_no.invalid" class="alert alert-danger">
+                    <div *ngIf="f.phone_no.errors.required">Phone number is required.</div>
+                    <div *ngIf="f.phone_no.errors.pattern">'Phone number should be start with 7/8/9 and should be 10 digit'.</div>
+                </div> -->
+            </div>
+            
+            <div class="form-group">
+                <b><label translate="">restaurant.open_time</label></b>
+                <ngb-timepicker [formControlName]="'open_time'" ></ngb-timepicker>
+                <!-- <div *ngIf="f.open_time.touched && f.open_time.invalid" class="alert alert-danger">
+                    <div *ngIf="f.open_time.errors.required">Open Timeis required.</div>
+                </div> -->
+            </div>
+            <div class="form-group">
+                <b><label translate="">restaurant.close_time</label></b>
+                <ngb-timepicker [formControlName]="'close_time'"></ngb-timepicker>
+
+                <!-- <div *ngIf="f.close_time.touched && f.open_time.invalid" class="alert alert-danger">
+                    <div *ngIf="f.close_time.errors.required">Close Timeis required.</div>
+                </div> -->
+            </div>
+            <button type="submit" class="btn btn-primary" value="Check" translate="">restaurant.save</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-primary" (click)="backEvent()" translate="">restaurant.back</button>
+        </form>
+        <br/>
+        <form (ngSubmit)="uploadFile()">
+            <input type="file" (change)="onFileChangeEvent($event)" multiple="false" 
+            name="select file" style="width: 210px;" accept=".png,.jpg,.jpeg,.jfif" />
+            <span>Image size should be less than 1mb</span>
+            <button type="submit" class="btn btn-primary" translate="">restaurant.upload_image</button>
+         </form>
+</div>

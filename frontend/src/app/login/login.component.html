@@ -1,0 +1,27 @@
+
+<div class=" container jumbotron">
+    <div class="row">
+        <div class="col-sm"> 
+    <h1 style="text-align: center;" class="display-5" translate>login.heading</h1>
+    <form [formGroup]="login" (ngSubmit)="checkLogin(login.value)">
+        <div class="imagecontainer">
+            <img src="assets\images\download.jpeg" alt="Avatar" class="avatar">
+        </div>
+        <div class="form-group">
+            <b><label for="username" translate>login.username<span style="color: red;">*</span></label></b>
+            <input type="text" placeholder="" class="form-control" 
+            formControlName="username" required/>
+        </div>
+        <div class="form-group">
+            <b><label for="password" translate>login.password<span style="color: red;">*</span></label></b>
+            <input type="password" placeholder="" class="form-control" 
+            formControlName="password" required>
+        </div>
+        <button type="submit" class="btn btn-success" translate="">login.heading</button>&nbsp;&nbsp;
+        <button class="btn btn-primary" style="float:right 1000px" 
+        (click)="signin()" translate="" >login.register</button>
+
+    </form>
+</div>
+</div>
+</div>

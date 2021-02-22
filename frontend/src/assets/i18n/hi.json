@@ -1,0 +1,65 @@
+{
+    "home":{
+        "active":"सक्रिय रेस्तरां सूची",
+        "main":"घर",
+        "register":"रजिस्टर",
+        "login":"लॉग इन",
+        "logout":"लॉग आउट",
+        "language":"भाषा"
+    },
+    "register":{
+        "heading":"यहाँ रजिस्टर में पाने के लिए",
+        "username":"उपयोगकर्ता नाम",
+        "placeholder_username":"उपयोगकर्ता नाम दर्ज करें",
+        "email":"ईमेल पता",
+        "placeholder_email":"ईमेल दर्ज करें",
+        "email_text":"हम आपके ईमेल को कभी भी किसी और के साथ साझा नहीं करेंगे",
+        "password":"कुंजिका",
+        "placeholder_password":"पास वर्ड दर्ज करें",
+        "submit":"प्रस्तुत"
+    },
+    "login":{
+        "heading":"लॉग इन करें",
+        "username":"उपयोगकर्ता नाम",
+        "password":"कुंजिका",
+        "register":"रजिस्टर"
+    },
+    "restaurant":{
+        "add_resto":"रेस्तरां जोड़ें",
+        "heading":"रेस्तरां",
+        "resto_name":"रेस्तरां का नाम",
+        "address":"पता",
+        "phone_no":"फ़ोन नंबर",
+        "open_time":"खुलने का समय",
+        "close_time":"बंद होने का समय",
+        "save":"सहेजें",
+        "back":"वापस",
+        "upload_image":"तस्विर अपलोड करना",
+        "update":"अपडेट करें"
+        
+
+    },
+    "admin":{
+        "heading":"प्रशासन प्रणाली",
+        "list":"रेस्तरां की सूची",
+        "resto":"रेस्तरां जोड़ें"
+    },
+    "restaurant_detail":{
+        "heading":"रेस्तरां विवरण",
+        "heading1":"रेस्तरां की सूची",
+        "resto_name":"रेस्तरां का नाम",
+        "address":"पता",
+        "phone":"फ़ोन नंबर",
+        "open_time":"खुलने का समय",
+        "close_time":"बंद होने का समय",
+        "menu_image":"मेनू छवि",
+        "last_updated_time":"अंतिम बार अपडेट किया गया",
+        "status":"स्थिति",
+        "action":"कार्य",
+        "change_status":"अवस्था बदलो",
+        "edit":"संपादित करें",
+        "delete":"हटाएं",
+        "back":"वापस"
+    }
+
+}

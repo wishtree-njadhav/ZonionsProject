@@ -1,0 +1,38 @@
+<div class="container jumbotron">
+    <h1 style="text-align: center;" class="display-1">Zonions</h1>
+    <button class="btn btn-primary" (click)="backEvent()" 
+    style="float: right; margin-bottom: 10px;" translate="">restaurant.back</button>
+    <h2 translate="restaurant.heading">Restaurant</h2>
+        <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <b><label translate="">restaurant.resto_name<span style="color: red;">*</span></label></b>
+            <input type="text" placeholder="Enter restaurant name" required name="restoName"[(ngModel)]="restaurant.restaurantName" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <b><label translate="">restaurant.address<span style="color: red;">*</span></label></b>
+            <textarea placeholder="enter address" class="form-control" name="Address" [(ngModel)]="restaurant.address"></textarea>
+        </div>
+        <div class="form-group">
+            <b><label translate="">restaurant.phone_no<span style="color: red;">*</span></label></b>
+            <input type="text" placeholder="Enter phone no." name="phone"class="form-control" [(ngModel)]="restaurant.phone_no">
+        </div>
+        <div class="form-group">
+            <b><label translate="">restaurant.open_time</label></b>
+            <ngb-timepicker  name="openTime" [(ngModel)]="open_time"></ngb-timepicker>
+        </div>
+        <div class="form-group">
+            <b><label translate="">restaurant.close_time</label></b>
+            <ngb-timepicker  name="closeTime" [(ngModel)]="close_time"></ngb-timepicker>
+        </div>
+        <div>
+            <img [src]="url" height="100px" width="100px"/> &nbsp;
+            <input type="file" name="imageName" (change)="onChange($event)" style="width: 210px;"/>
+            <span>Image size should be less than 1mb</span>
+            <button type="button" class="btn btn-primary" (click)="updateImage()" translate="">restaurant.upload_image</button>
+        </div>
+        <br/>
+        <button type="submit" class="btn btn-primary" translate="">restaurant.update</button>
+    </form>
+    <br/>
+   
+</div>

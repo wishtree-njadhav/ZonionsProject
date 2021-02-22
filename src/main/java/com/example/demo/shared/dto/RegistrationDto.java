@@ -47,6 +47,11 @@ public class RegistrationDto implements Serializable{
 	public void setEncryptedPassword(String encryptedPassword) {
 		this.encryptedPassword = encryptedPassword;
 	}
+	@Override
+	public String toString() {
+		return "RegistrationDto [id=" + id + ", userId=" + userId + ", userName=" + userName + ", email=" + email
+				+ ", password=" + password + ", encryptedPassword=" + encryptedPassword + "]";
+	}
     
 	
 }

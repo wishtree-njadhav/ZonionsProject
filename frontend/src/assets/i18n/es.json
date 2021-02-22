@@ -1,0 +1,63 @@
+{
+    
+    "home":{
+        "active":"Lista activa de restaurantes",
+        "main":"Hogar",
+        "register":"Registrarse",
+        "login":"Acceso",
+        "logout":"Cerrar Sesión",
+        "language":"Idioma"
+    },
+    "register":{
+        "heading":"Para entrar Regístrate aquí",
+        "username":"Nombre de usuario",
+        "placeholder_username":"Introduzca su nombre de usuario",
+        "email":"Dirección de correo electrónico",
+        "placeholder_email":"Ingrese correo electrónico",
+        "email_text":"Nunca compartiremos su correo electrónico con nadie más",
+        "password":"Contraseña",
+        "placeholder_password":"Introducir la contraseña",
+        "submit":"Enviar"
+    },
+    "login":{
+        "heading":"Acceso",
+        "username":"Nombre de usuario",
+        "password":"Contraseña",
+        "register":"Registrarse"
+    },
+    "restaurant":{
+        "add_resto":"Agregar restaurante",
+        "heading":"Restaurante",
+        "resto_name":"Nombre del restaurante",
+        "address":"Dirección",
+        "phone_no":"Número de teléfono",
+        "open_time":"Tiempo abierto",
+        "close_time":"Hora de cierre",
+        "save":"Salvar",
+        "back":"atrás",
+        "upload_image":"Cargar imagen",
+        "update":"Actualizar"
+    },
+    "admin":{
+        "heading":"Sistema de administración",
+        "list":"Lista de restaurantes",
+        "resto":"Agregar restaurante"
+    },
+    "restaurant_detail":{
+        "heading":"Detalles del restaurante",
+        "heading1":"Lista de restaurantes",
+        "resto_name":"Nombre del restaurante",
+        "address":"Dirección",
+        "phone":"Número de teléfono",
+        "open_time":"Tiempo abierto",
+        "close_time":"Hora de cierre",
+        "menu_image":"Imagen del menú",
+        "last_updated_time":"Hora de última actualización",
+        "status":"Estado",
+        "action":"Acción",
+        "change_status":"Cambiar Estado",
+        "edit":"Editar",
+        "back":"atrás",
+        "delete":"Borrar"
+    }
+}

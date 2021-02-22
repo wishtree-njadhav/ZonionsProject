@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-sm  navbar-dark">
+  <i class="material-icons brand-icon" style="font-size: 50px;">restaurant</i>&nbsp;
+
+  <h5 class="display-4">Zonions</h5>
+  <ul class="navbar-nav" style="margin-left: 50px;">
+    <li class="nav-item"><a routerLink="home" class="nav-link" routerLinkActive="active" 
+      style="font-size: 30px;" 
+      translate>home.main</a></li>
+    <li class="nav-item"><a routerLink="registration" class="nav-link" 
+      routerLinkActive="active" style="font-size: 30px;" translate>home.register</a></li>
+
+    <li class="nav-item"><a routerLink="login" class="nav-link" 
+      routerLinkActive="active" style="font-size: 30px;" translate>home.login</a></li>
+
+    <li class="nav-item"><a routerLink="logout" class="nav-link" 
+      style="font-size: 30px;" translate>home.logout</a></li>
+
+    <li class="nav-item">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle language" type="button"
+         id="dropdownMenuButton" data-toggle="dropdown" 
+        aria-haspopup="true" aria-expanded="false" translate>
+        home.language
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            <button class="dropdown-item" type="button" (click)="changeLang('en')">English</button>
+            <button class="dropdown-item" type="button" (click)="changeLang('hi')">हिन्दी</button>
+            <button class="dropdown-item" type="button" (click)="changeLang('es')">española</button>
+          </div>
+      </div>
+    
+    </li>
+  </ul>
+</nav>
+
+<router-outlet></router-outlet>
+<footer class="bg-light text-center text-lg-start">
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+    © 2021 Copyright:
+    <a class="text-dark" >Zonions.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>

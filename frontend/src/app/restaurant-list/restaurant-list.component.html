@@ -1,0 +1,36 @@
+<div class="div">
+    <h1 class="h1">Zonions</h1>
+    <button style="float: right;" class="btn btn-primary" 
+    (click)="back()" translate="">restaurant_detail.back</button>
+    <h2 style="text-align: center;" translate="">restaurant_detail.heading1</h2>
+    <table class="table">
+            <thead>
+                <th translate="">restaurant_detail.resto_name</th>
+                <th translate="">restaurant_detail.address</th>
+                <th translate="">restaurant_detail.phone</th>
+                <th translate="">restaurant_detail.open_time</th>
+                <th translate="">restaurant_detail.close_time</th>
+                <th translate="">restaurant_detail.last_updated_time</th>
+                <th translate="">restaurant_detail.status</th>
+                <th translate="">restaurant_detail.action</th>
+                <th translate="">restaurant_detail.change_status</th>
+            </thead>
+            <tbody>
+                <ng-container *ngFor="let rl of restaurantList">
+                <tr >
+                    <td>{{rl.restaurantName}}</td>
+                    <td>{{rl.address}}</td>
+                    <td>{{rl.phone_no}}</td>
+                    <td>{{rl.open_time }}</td>
+                    <td>{{rl.close_time}}</td>
+                    <td>{{rl.updatedTime | slice:0:8}}</td>
+                    <td>{{rl.status}}</td>
+                    <td><button class="btn btn-primary" (click)="edit(rl.id)" translate="">restaurant_detail.edit</button>
+                        &nbsp;<button class="btn btn-danger" (click)="deleteRestaurant(rl.id)" 
+                        translate="">restaurant_detail.delete</button></td>
+                    <td><button class="btn btn-success" (click)="changeStatus(rl.id)" translate="">restaurant_detail.change_status</button></td>
+                </tr>
+            </ng-container>
+            </tbody>
+    </table>
+</div>

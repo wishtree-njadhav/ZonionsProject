@@ -1,0 +1,63 @@
+{
+    "home":{
+        "active":"Active Restaurant List",
+        "main":"Home",
+        "register":"Register",
+        "login":"Login",
+        "logout":"Logout",
+        "language":"Language"
+    },
+    "register":{
+        "heading":"To get in Register here",
+        "username":"UserName",
+        "placeholder_username":"Enter username",
+        "email":"Email Address",
+        "placeholder_email":"Enter email",
+        "email_text":"We'll never share your email with anyone else",
+        "password":"Password",
+        "placeholder_password":"Enter password",
+        "submit":"Submit"
+    },
+    "login":{
+        "heading":"Login",
+        "username":"Username",
+        "password":"Password",
+        "register":"Register"
+    },
+    "restaurant":{
+        "add_resto":"Add Restaurant",
+        "heading":"Restaurant",
+        "resto_name":"Restaurant Name",
+        "address":"Address",
+        "phone_no":"Phone Number",
+        "open_time":"Open Time",
+        "close_time":"Close Time",
+        "save":"Save",
+        "back":"Back",
+        "upload_image":"Upload Image",
+        "update":"Update"
+
+    },
+    "admin":{
+        "heading":"Administration System",
+        "list":"Restaurant List",
+        "resto":"Add Restaurant"
+    },
+    "restaurant_detail":{
+        "heading":"Restaurant Details",
+        "heading1":"Restaurant List",
+        "resto_name":"Restaurant Name",
+        "address":"Address",
+        "phone":"Phone number",
+        "open_time":"Open Time",
+        "close_time":"Close Time",
+        "menu_image":"Menu Image",
+        "last_updated_time":"Last Updated Time",
+        "status":"Status",
+        "action":"Action",
+        "change_status":"Change status",
+        "edit":"Edit",
+        "delete":"Delete",
+        "back":"Back"
+    }
+}
